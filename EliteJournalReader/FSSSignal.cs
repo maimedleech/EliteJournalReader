@@ -1,6 +1,6 @@
 ﻿namespace EliteJournalReader
 {
-    public struct SAASignal
+    public struct FSSSignal
     {
         public string Type;
         public string Type_Localised;

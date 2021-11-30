@@ -23,74 +23,125 @@ namespace EliteJournalReader
         Unknown,
 
         // main sequence
+        [Description("O CLASS STAR")]
         O,
+        [Description("B CLASS STAR")]
         B,
+        [Description("A CLASS STAR")]
         A,
+        [Description("F CLASS STAR")]
         F,
+        [Description("G CLASS STAR")]
         G,
+        [Description("K CLASS STAR")]
         K,
+        [Description("M CLASS STAR")]
         M,
+        [Description("L CLASS STAR")]
         L,
+        [Description("T CLASS STAR")]
         T,
+        [Description("Y CLASS STAR")]
         Y,
 
         // proto stars
+        [Description("TTS PROTO STAR")]
         TTS,
+        [Description("AEBE PROTO STAR")]
         AeBe,
 
         // wolf-rayet
+        [Description("W WOLF-RAYLET")]
         W,
+        [Description("WN WOLF-RAYLET")]
         WN,
+        [Description("WNC WOLF-RAYLET")]
         WNC,
+        [Description("WC WOLF-RAYLET")]
         WC,
+        [Description("WO WOLF-RAYLET")]
         WO,
 
         // carbon stars
+        [Description("CS CARBON STAR")]
         CS,
+        [Description("C CARBON STAR")]
         C,
+        [Description("CN CARBON STAR")]
         CN,
+        [Description("CJ  CARBON STAR")]
         CJ,
+        [Description("CH CLASS CARBON STAR")]
         CH,
+        [Description("CHD CLASS CARBON STAR")]
         CHd,
-
+        [Description("MS CLASS CARBON STAR")]
         MS,
+        [Description("S CLASS CARBON STAR")]
         S,
 
-        // white drafs
+        // white dwarfs
+        [Description("D CLASS WHITE DWARF STAR")]
         D,
+        [Description("DA CLASS WHITE DWARF STAR")]
         DA,
+        [Description("DAB CLASS WHITE DWARF STAR")]
         DAB,
+        [Description("DAO CLASS WHITE DWARF STAR")]
         DAO,
+        [Description("DAZ CLASS WHITE DWARF STAR")]
         DAZ,
+        [Description("DAV CLASS WHITE DWARF STAR")]
         DAV,
+        [Description("DB CLASS WHITE DWARF STAR")]
         DB,
+        [Description("DBZ CLASS WHITE DWARF STAR")]
         DBZ,
+        [Description("DBV CLASS WHITE DWARF STAR")]
         DBV,
+        [Description("DO CLASS WHITE DWARF STAR")]
         DO,
+        [Description("DOV CLASS WHITE DWARF STAR")]
         DOV,
+        [Description("DQ CLASS WHITE DWARF STAR")]
         DQ,
+        [Description("DC CLASS WHITE DWARF STAR")]
         DC,
+        [Description("DCV CLASS WHITE DWARF STAR")]
         DCV,
+        [Description("DX CLASS WHITE DWARF STAR")]
         DX,
 
         // neutron
+        [Description("NEUTRON STAR")]
         N,
 
         // black hole
+        [Description("BLACK HOLE")]
         H,
 
         // exotic
+        [Description("EXOTIC")]
         X,
 
         // other
+        [Description("SUPER MASSIVE BLACK HOLE")]
         SupermassiveBlackHole,
+        [Description("A CLASS SUPER GIANT")]
         A_BlueWhiteSuperGiant,
+        [Description("F CLASS SUPER GIANT")]
         F_WhiteSuperGiant,
+        [Description("M CLASS SUPER GIANT")]
         M_RedSuperGiant,
+        [Description("M CLASS GIANT")]
         M_RedGiant,
+        [Description("K CLASS GIANT")]
         K_OrangeGiant,
+        [Description("ROGUE PLANET")]
         RoguePlanet,
+        [Description("NEBULA")]
         Nebula,
+        [Description("STELLA REMNANT")]
         StellarRemnantNebula
     }
 
@@ -128,62 +179,66 @@ namespace EliteJournalReader
     {
         Unknown,
 
-        [Description("Metal rich body")]
+        [Description("METAL RICH BODY")]
         MetalRichBody,
 
-        [Description("High metal content body")]
+        [Description("HIGH METAL CONTENT BODY")]
         HighMetalContentBody,
 
-        [Description("Rocky body")]
+        [Description("ROCKY BODY")]
         RockyBody,
 
-        [Description("Icy body")]
+        [Description("ICY BODY")]
         IcyBody,
 
-        [Description("Rocky ice body")]
+        [Description("ROCKY ICE BODY")]
         RockyIceBody,
 
-        [Description("Earthlike body")]
+        [Description("EARTHLIKE BODY")]
         EarthlikeBody,
 
-        [Description("Water world")]
+        [Description("WATER WORLD")]
         WaterWorld,
 
-        [Description("Ammonia world")]
+        [Description("AMMONIA WORLD")]
         AmmoniaWorld,
 
-        [Description("Water giant")]
+        [Description("WATER GIANT")]
         WaterGiant,
 
-        [Description("Water giant with life")]
+        [Description("WATER GIANT WITH LIFE")]
         WaterGiantWithLife,
 
-        [Description("Gas giant with water based life")]
+        [Description("GAS GIANT WITH WATER BASED LIFE")]
         GasGiantWithWaterBasedLife,
 
-        [Description("Gas giant with ammonia based life")]
+        [Description("GAS GIANT WITH AMMONIA BASED LIFE")]
         GasGiantWithAmmoniaBasedLife,
 
-        [Description("Sudarsky class I gas giant")]
+        [Description("SUDARSKY CLASS I GAS GIANT")]
         SudarskyClassIGasGiant,
 
-        [Description("Sudarsky class II gas giant")]
+        [Description("SUDARSKY CLASS II GAS GIANT")]
         SudarskyClassIIGasGiant,
 
-        [Description("Sudarsky class III gas giant")]
+        [Description("SUDARSKY CLASS III GAS GIANT")]
         SudarskyClassIIIGasGiant,
 
-        [Description("Sudarsky class IV gas giant")]
+        [Description("SUDARSKY CLASS IV GAS GIANT")]
         SudarskyClassIVGasGiant,
 
-        [Description("Sudarsky class V gas giant")]
+        [Description("SUDARSKY CLASS V GAS GIANT")]
         SudarskyClassVGasGiant,
 
-        [Description("Helium rich gas giant")]
+        [Description("HELIUM RICH GAS GIANT")]
         HeliumRichGasGiant,
 
-        [Description("Helium gas giant")]
-        HeliumGasGiant
+        [Description("HELIUM GAS GIANT")]
+        HeliumGasGiant,
+
+        //Not used in the event, added for ODExplorer Use
+        [Description("")]
+        EdsmValuableBody
     }
 
     public enum AtmosphereClass

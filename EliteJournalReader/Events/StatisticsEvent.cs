@@ -120,6 +120,8 @@ namespace EliteJournalReader.Events
             public ThargoidEncounters TG_Encounters { get; set; }
             public CQC CQC { get; set; }
             public MaterialsTrader Material_Trader_Stats { get; set; }
+            public FLEETCARRIER FLEETCARRIER { get; set; }
+            public Exobiology Exobiology { get; set; }
         }
 
         public struct BankAccount
@@ -262,6 +264,43 @@ namespace EliteJournalReader.Events
         {
             public long Trades_Completed { get; set; }
             public long Materials_Traded { get; set; }
+        }
+
+        public struct FLEETCARRIER
+        {
+            public int FLEETCARRIER_EXPORT_TOTAL { get; set; }
+            public int FLEETCARRIER_IMPORT_TOTAL { get; set; }
+            public int FLEETCARRIER_TRADEPROFIT_TOTAL { get; set; }
+            public int FLEETCARRIER_TRADESPEND_TOTAL { get; set; }
+            public int FLEETCARRIER_STOLENPROFIT_TOTAL { get; set; }
+            public int FLEETCARRIER_STOLENSPEND_TOTAL { get; set; }
+            public double FLEETCARRIER_DISTANCE_TRAVELLED { get; set; }
+            public int FLEETCARRIER_TOTAL_JUMPS { get; set; }
+            public int FLEETCARRIER_SHIPYARD_SOLD { get; set; }
+            public int FLEETCARRIER_SHIPYARD_PROFIT { get; set; }
+            public int FLEETCARRIER_OUTFITTING_SOLD { get; set; }
+            public int FLEETCARRIER_OUTFITTING_PROFIT { get; set; }
+            public int FLEETCARRIER_REARM_TOTAL { get; set; }
+            public int FLEETCARRIER_REFUEL_TOTAL { get; set; }
+            public int FLEETCARRIER_REFUEL_PROFIT { get; set; }
+            public int FLEETCARRIER_REPAIRS_TOTAL { get; set; }
+            public int FLEETCARRIER_VOUCHERS_REDEEMED { get; set; }
+            public int FLEETCARRIER_VOUCHERS_PROFIT { get; set; }
+        }
+
+        public struct Exobiology
+        {
+            public int Organic_Genus_Encountered { get; set; }
+            public int Organic_Species_Encountered { get; set; }
+            public int Organic_Variant_Encountered { get; set; }
+            public int Organic_Data_Profits { get; set; }
+            public int Organic_Data { get; set; }
+            public int First_Logged_Profits { get; set; }
+            public int First_Logged { get; set; }
+            public int Organic_Systems { get; set; }
+            public int Organic_Planets { get; set; }
+            public int Organic_Genus { get; set; }
+            public int Organic_Species { get; set; }
         }
     }
 }

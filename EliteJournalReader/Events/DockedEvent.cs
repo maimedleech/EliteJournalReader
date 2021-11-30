@@ -50,6 +50,9 @@ namespace EliteJournalReader.Events
             public bool Wanted { get; set; } = false;
             public bool ActiveFine { get; set; } = false;
             public LandingPads LandingPads { get; set; }
+            public bool Taxi { get; set; }
+            public bool Multicrew { get; set; }
+            public string StationState { get; set; }
 
             public struct Economy
             {

@@ -60,8 +60,11 @@ namespace EliteJournalReader.Events
 
             [JsonConverter(typeof(SystemPositionConverter))]
             public SystemPosition StarPos { get; set; }
-
+            public bool Taxi { get; set; }
+            public bool Multicrew { get; set; }
             public string Body { get; set; }
+            public int BodyID { get; set; }
+            public string BodyType { get; set; }
             public double JumpDist { get; set; }
             public double FuelUsed { get; set; }
             public double FuelLevel { get; set; }

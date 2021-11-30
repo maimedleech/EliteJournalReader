@@ -13,10 +13,11 @@ namespace EliteJournalReader.Events
 
         public class FileheaderEventArgs : JournalEventArgs
         {
-            public string GameVersion { get; set; }
-            public string Build { get; set; }
-            public string Language { get; set; }
-            public int Part { get; set; }
+            public int part { get; set; }
+            public string language { get; set; }
+            public bool Odyssey { get; set; }
+            public string gameversion { get; set; }
+            public string build { get; set; }
         }
     }
 }

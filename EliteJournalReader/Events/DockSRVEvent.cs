@@ -16,6 +16,8 @@ namespace EliteJournalReader.Events
         public class DockSRVEventArgs : JournalEventArgs
         {
             public long ID { get; set; }
+            public string SRVType { get; set; }
+            public string SRVType_Localised { get; set; }
         }
     }
 }

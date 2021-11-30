@@ -42,8 +42,11 @@ namespace EliteJournalReader.Events
             public string NearestDestination { get; set; }
             public string NearestDestination_Localised { get; set; }
             public bool IsNewEntry { get; set; } = false;
+            public int? VoucherAmount { get; set; }
             public bool NewTraitsDiscovered { get; set; } = false;
             public string[] Traits { get; set; }
+            public double Latitude { get; set; }
+            public double Longitude { get; set; }
         }
     }
 }

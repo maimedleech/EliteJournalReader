@@ -17,7 +17,12 @@ namespace EliteJournalReader
         Master,
         Dangerous,
         Deadly,
-        Elite
+        Elite,
+        EliteI,
+        EliteII,
+        EliteIII,
+        EliteIV,
+        EliteV
     }
 
     public enum TradeRank
@@ -30,7 +35,12 @@ namespace EliteJournalReader
         Broker,
         Entrepreneur,
         Tycoon,
-        Elite
+        Elite,
+        EliteI,
+        EliteII,
+        EliteIII,
+        EliteIV,
+        EliteV
     }
 
     public enum ExplorationRank
@@ -43,9 +53,49 @@ namespace EliteJournalReader
         Pathfinder,
         Ranger,
         Pioneer,
-        Elite
+        Elite,
+        EliteI,
+        EliteII,
+        EliteIII,
+        EliteIV,
+        EliteV
     }
 
+    public enum MercenaryRank
+    {
+        Defenceless = 0,
+        [Description("Mostly Defenceless")] MostlyDefenceless,
+        Rookie,
+        Soldier,
+        Gunslinger,
+        Warrior,
+        Gladiator,
+        Deadeye,
+        Elite,
+        EliteI,
+        EliteII,
+        EliteIII,
+        EliteIV,
+        EliteV
+    }
+
+    public enum ExobiologistRank
+    {
+        Directionless = 0,
+        [Description("Mostly Directionless")] MostlyDirectionless,
+        Compiler,
+        Collector,
+        Cataloguer,
+        Taxonomist,
+        Ecologist,
+        Geneticist,
+        Elite,
+        EliteI,
+        EliteII,
+        EliteIII,
+        EliteIV,
+        EliteV
+    }
     public enum FederationRank
     {
         None = 0,
@@ -94,6 +144,11 @@ namespace EliteJournalReader
         Champion,
         Hero,
         Legend,
-        Elite
+        Elite,
+        EliteI,
+        EliteII,
+        EliteIII,
+        EliteIV,
+        EliteV
     }
 }

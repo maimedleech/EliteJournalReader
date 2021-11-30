@@ -276,9 +276,18 @@ namespace EliteJournalReader.Events
 
             public bool? WasDiscovered { get; set; }
             public bool? WasMapped { get; set; }
+            public double AscendingNode { get; set; }
+            public double MeanAnomaly { get; set; }
+            public Composition Composition { get; set; }
         }
     }
 
+    public struct Composition
+    {
+        public double Ice;
+        public double Rock;
+        public double Metal;
+    }
     public struct ScanItemComponent
     {
         public string Name;

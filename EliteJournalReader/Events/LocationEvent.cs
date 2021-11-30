@@ -44,7 +44,9 @@ namespace EliteJournalReader.Events
 
         public class LocationEventArgs : JournalEventArgs
         {
-
+            public bool Taxi { get; set; }
+            public bool Multicrew { get; set; }
+            public double DistFromStarLS { get; set; }
             public string StarSystem { get; set; }
             public long SystemAddress { get; set; }
 
@@ -69,7 +71,7 @@ namespace EliteJournalReader.Events
             public string StationAllegiance { get; set; }
             public string[] StationServices { get; set; }
             public Economy[] StationEconomies { get; set; }
-
+            public string StationEconomy { get; set; }
             public Faction SystemFaction { get; set; }
             public string SystemAllegiance { get; set; }
             public string SystemEconomy { get; set; }
