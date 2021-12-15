@@ -347,6 +347,7 @@ namespace EliteJournalReader
 
     public enum ReserveLevel
     {
+        [Description("?")]
         Unknown,
 
         [Description("DepletedResources")]

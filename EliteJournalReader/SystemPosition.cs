@@ -10,9 +10,9 @@ namespace EliteJournalReader
 {
     public struct SystemPosition
     {
-        public decimal X, Y, Z;
+        public double X, Y, Z;
 
-        public bool IsZero() => X == 0 && Y == 0 && Z == 0;
+        public bool IsZero() => Math.Abs(X) <= 0.001 && Math.Abs(Y) <= 0.001 && Math.Abs(Z) <= 0.001;
 
         public override bool Equals(object obj) => obj is SystemPosition that && Equals(that);
 
@@ -32,13 +32,23 @@ namespace EliteJournalReader
             }
         }
 
-        public decimal[] ToArray() => new[] { X, Y, Z };
+        public double[] ToArray() => new[] { X, Y, Z };
 
         public override string ToString() => FormattableString.Invariant($"{X},{Y},{Z}");
 
         public static bool operator ==(SystemPosition left, SystemPosition right) => left.Equals(right);
 
         public static bool operator !=(SystemPosition left, SystemPosition right) => !(left == right);
+
+        public SystemPosition Copy() => new SystemPosition() { X = X, Y = Y, Z = Z };
+
+        public static float Distance(SystemPosition a, SystemPosition b)
+        {
+            double diff_x = a.X - b.X;
+            double diff_y = a.Y - b.Y;
+            double diff_z = a.Z - b.Z;
+            return (float)Math.Sqrt(diff_x * diff_x + diff_y * diff_y + diff_z * diff_z);
+        }
     }
 
     public class SystemPositionConverter : JsonConverter
@@ -50,7 +60,7 @@ namespace EliteJournalReader
             var pos = (SystemPosition)existingValue;
             if (JToken.ReadFrom(reader) is JArray jarr)
             {
-                decimal[] array = jarr.ToObject<decimal[]>();
+                double[] array = jarr.ToObject<double[]>();
                 pos.X = Math.Round(array[0], 3);
                 pos.Y = Math.Round(array[1], 3);
                 pos.Z = Math.Round(array[2], 3);
