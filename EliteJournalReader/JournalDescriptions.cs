@@ -243,9 +243,9 @@ namespace EliteJournalReader
 
     public enum AtmosphereClass
     {
-        Unknown,
-
         None,
+
+        Unknown,     
 
         [Description("No atmosphere")]
         NoAtmosphere,

@@ -284,23 +284,23 @@ namespace EliteJournalReader.Events
 
     public struct Composition
     {
-        public double Ice;
-        public double Rock;
-        public double Metal;
+        public double Ice { get; set; }
+        public double Rock { get; set; }
+        public double Metal { get; set; }
     }
     public struct ScanItemComponent
     {
-        public string Name;
-        public double Percent;
+        public string Name { get; set; }
+        public double Percent { get; set; }
     }
 
     public struct PlanetRing
     {
-        public string Name;
-        public string RingClass;
-        public double MassMT;
-        public double InnerRad;
-        public double OuterRad;
+        public string Name { get; set; }
+        public string RingClass { get; set; }
+        public double MassMT { get; set; }
+        public double InnerRad { get; set; }
+        public double OuterRad { get; set; }
     }
 
     public struct BodyParent
