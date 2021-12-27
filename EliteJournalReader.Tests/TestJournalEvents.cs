@@ -33,7 +33,7 @@ namespace EliteJournalReader.Tests
             watcher.FireFakeEvent(@"{ ""timestamp"":""2017-12-30T13:36:28Z"", ""event"":""Fileheader"", ""part"":1, ""language"":""English\\UK"", ""gameversion"":""2.4"", ""build"":""r160439/r0 "" }");
 
             Assert.IsNotNull(args);
-            Assert.AreEqual("English\\UK", args.Language);
+            Assert.AreEqual("English\\UK", args.language);
         }
 
         [TestMethod]
