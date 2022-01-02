@@ -37,9 +37,9 @@ namespace EliteJournalReader
         /// <summary>
         ///     Initializes a new instance of the <see cref="T:System.Object" /> class.
         /// </summary>
-        public StatusWatcher(string path)
+        public StatusWatcher(string path = null)
         {
-            Initialize(path);
+            Initialize(path ?? JournalPath.GetJournalPath());
         }
 
         protected void Initialize(string path)

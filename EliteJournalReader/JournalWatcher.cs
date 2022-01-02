@@ -148,13 +148,13 @@ namespace EliteJournalReader
         /// <summary>
         ///     Initializes a new instance of the <see cref="T:System.Object" /> class.
         /// </summary>
-        public JournalWatcher(string path)
+        public JournalWatcher(string path = null)
         {
             Filter = DefaultFilter;
             NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.CreationTime | NotifyFilters.Size;
             try
             {
-                Path = System.IO.Path.GetFullPath(path);
+                Path = System.IO.Path.GetFullPath(path ?? JournalPath.GetJournalPath());
             }
             catch (Exception ex)
             {
@@ -295,6 +295,7 @@ namespace EliteJournalReader
 
                 string json = File.ReadAllText(cargoPath);
                 var obj = JObject.Parse(json);
+                Debug.WriteLine(">>>>> ReadCargoJson: {0}", obj);
                 var cargo = obj.ToObject<CargoEvent.CargoEventArgs>();
                 return cargo;
             }
@@ -597,6 +598,7 @@ namespace EliteJournalReader
         /// <param name="evt"></param>
         private JournalEventArgs FireEvent(string eventType, JObject evt)
         {
+            Debug.WriteLine("####### {0} {1}", eventType, evt);
             if (journalEventsByName.TryGetValue(eventType, out var handler))
                 return handler.FireEvent(this, evt);
             else
